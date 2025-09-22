@@ -1,0 +1,216 @@
+/* LinkedIn Private Notes Extension Styles */
+
+.linkedin-notes-section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.linkedin-notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.linkedin-notes-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.linkedin-notes-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.linkedin-notes-save-btn,
+.linkedin-notes-clear-btn,
+.linkedin-notes-file-btn {
+  padding: 8px 16px;
+  border: 1px solid #0a66c2;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.linkedin-notes-save-btn {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.linkedin-notes-save-btn:hover {
+  background: #004182;
+  border-color: #004182;
+}
+
+.linkedin-notes-clear-btn {
+  background: #ffffff;
+  color: #0a66c2;
+}
+
+.linkedin-notes-clear-btn:hover {
+  background: #f3f2ef;
+  border-color: #004182;
+}
+
+.linkedin-notes-file-btn {
+  background: #ffffff;
+  color: #0a66c2;
+  border-color: #666666;
+}
+
+.linkedin-notes-file-btn:hover {
+  background: #f3f2ef;
+  border-color: #0a66c2;
+}
+
+.linkedin-notes-content {
+  padding: 16px 24px;
+}
+
+.linkedin-notes-file-info {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.linkedin-notes-file-info #file-path {
+  font-weight: 500;
+  color: #666666;
+}
+
+.linkedin-notes-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.linkedin-notes-textarea:focus {
+  outline: none;
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.1);
+}
+
+.linkedin-notes-textarea::placeholder {
+  color: #666666;
+  font-style: italic;
+}
+
+.linkedin-notes-status {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  min-height: 16px;
+  transition: all 0.3s ease;
+}
+
+.linkedin-notes-status.success {
+  color: #057642;
+}
+
+.linkedin-notes-status.info {
+  color: #0a66c2;
+}
+
+.linkedin-notes-status.error {
+  color: #d32f2f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .linkedin-notes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .linkedin-notes-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .linkedin-notes-content {
+    padding: 12px 16px;
+  }
+  
+  .linkedin-notes-textarea {
+    min-height: 80px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .linkedin-notes-section {
+    background: #1a1a1a;
+    border-color: #333333;
+  }
+  
+  .linkedin-notes-header {
+    background: #2a2a2a;
+    border-color: #333333;
+  }
+  
+  .linkedin-notes-title {
+    color: #ffffff;
+  }
+  
+  .linkedin-notes-textarea {
+    background: #1a1a1a;
+    border-color: #333333;
+    color: #ffffff;
+  }
+  
+  .linkedin-notes-textarea::placeholder {
+    color: #999999;
+  }
+  
+  .linkedin-notes-clear-btn {
+    background: #2a2a2a;
+    color: #0a66c2;
+    border-color: #0a66c2;
+  }
+  
+  .linkedin-notes-clear-btn:hover {
+    background: #333333;
+  }
+}
+
+/* Animation for smooth appearance */
+.linkedin-notes-section {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
